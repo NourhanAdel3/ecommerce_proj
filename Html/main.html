@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antique Cafe</title>
+    <link rel="styleSheet" href="../Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav_links">
+            <li>
+              <a href="#intro"> Intro</a>
+            </li>
+            <li>
+                <a href="#menu"> Menu</a>
+            </li>
+            <li>
+                <a href="#about"> About</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="cart-container">
+                <button class="cart-button" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+                <div class="cart">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p id="cart-empty">Your cart is empty.</p>
+                    <div class="cart-total">
+                        <p>Total: $<span id="cart-total">0.00</span></p>
+                    </div>
+                    <button class="checkout-button" onclick="checkout()">Checkout</button>
+                </div>
+            </li>
+    </ul>
+    </nav>
+    <section class="bg_images">
+        <div class="section" id="section-1"></div>
+        <div id="intro" class="first_content">
+            <h1>
+                Antique Cafe
+            </h1>
+            <p>your daily energy booster</p>
+        </div>
+        <div id="menu" class="icon">
+            <a href="#menu">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Let's explore...</span>
+            </a>
+        </div>
+        <div class="section" id="section-2">
+            <div id="menu"class="second_content">
+                <h2> Our Cafe Menu</h2>
+            </div>
+        </div>
+        <div class="section" id="section-3">
+            <section class="items">
+                <div class="item-1 hot">
+                    <div class="image_description">
+                        <div><img src="../img/menu-item-1.jpg"></div>
+                        <div>
+                            <h3>Hot Cappuccino</h3>
+                            <p> S $8.50 <br>
+                                L $10.50
+                            </p>
+                            <button class="add-to-cart" onclick="addToCart('Hot Cappuccino', 8.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="image_description">
+                        <div> <img src="../img/menu-item-2.jpg"></div>
+                        <div>
+                            <h3>Hot Americano</h3>
+                            <p> S $9.50 <br>
+                                L $12.50
+                            </p>
+                            <button class="add-to-cart" onclick="addToCart('Hot Americano', 9.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="image_description">
+                        <div><img src="../img/menu-item-4.jpg"></div>
+                        <div>
+                            <h3>Hot Espresso <br>
+                                Hot Chocolate</h3>
+                            <p>M $11.75 <br>
+                                L $14.75
+                            </p>
+                            <button class="add-to-cart" onclick="addToCart('Hot Espresso',11.75)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-2 cold">
+                    <div class="image_description">
+                        <div><img src="../img/menu-item-5.jpg"></div>
+                        <div>
+                            <h3>Iced Cappuccino</h3>
+                            <p>Small $10 <br>
+                                Large $15</p>
+                                <button class="add-to-cart" onclick="addToCart('Iced Cappuccino', 10)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="image_description">
+                        <div><img src="../img/menu-item-6.jpg"></div>
+                        <div>
+                            <h3>Iced Americano</h3>
+                            <p>Small $12.50<br>
+                                Large $16.50</p>
+                                <button class="add-to-cart" onclick="addToCart('Iced Americano', 12.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="image_description">
+
+                        <div><img src="../img/menu-item-7.jpg"></div>
+                        <div>
+                            <h3>Iced Milky Latte</h3>
+                            <p>Small $14 <br>
+                                Large $18</p>
+                                <button class="add-to-cart" onclick="addToCart('Iced Milky Latte', 14)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="section" id="section-4">
+            <div id="about"class="third_content">
+                <h2>About our Cafe</h2>
+                <br>
+                <br>
+                <br>
+                <p>Our Café, is your Country Table Café. Staff and customers alike are all all treated as family.
+                    <br>
+                    <br>
+                    Our ethos makes our Café a popular meeting place for lovely people visting Devon and
+                    <br>
+                    <br>
+                    local folk meeting up with friends and family for a hearty breakfast,
+                    <br>
+                    <br>
+                    a light lunch or just a catch up over coffee and
+                    <br>
+                    <br>
+                    cake or one of our very popular homemade scones.
+                </p>
+            </div>
+            <div id="contact" class="contact">
+                <a href="#contact" id="#contact">
+                    <i class="far fa-comments mr-4"></i>
+                    <span>Contact Us</span>
+                </a>
+            </div>
+            <div id="contact"class="fourth_content">
+                <h2>Contact Us</h2>
+                <p> Praesent tellus magna, consectetur sit amet volutpat eu,
+                    pulvinar vitae sem. Sed ultrices.bg white 80% alpha. btn #066</p>
+                <div class="phem">
+                    <a class="phone">
+                        <p> Tel:0100200340</p>
+                    </a>
+                    <a class="email">
+                        <p>Email:info@domain.com</p>
+                    </a>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <label for="name">Name</label>
+                        <input type="name" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Send It</button>
+                    </form>
+                </div>
+                <footer class="footer">
+                    Copyright 2045 Antique Cafe. All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </section>
+    <script src="../script/script.js"></script>
+</body>
+</html>
