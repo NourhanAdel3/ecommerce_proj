@@ -174,16 +174,16 @@ html {
     transition: background-position 2s ease;
 }
 #section-1 {
-    background-image: url(../img/antique-cafe-bg-01.jpg);
+    background-image: url(img/antique-cafe-bg-01.jpg);
 }
 #section-2 {
-    background-image: url(../img/antique-cafe-bg-02.jpg);
+    background-image: url(img/antique-cafe-bg-02.jpg);
 }
 #section-3 {
-    background-image: url(../img/antique-cafe-bg-03.jpg);
+    background-image: url(img/antique-cafe-bg-03.jpg);
 }
 #section-4 {
-    background-image: url(../img/antique-cafe-bg-04.jpg);
+    background-image: url(img/antique-cafe-bg-04.jpg);
 }
 .second_content {
     display: flex;
